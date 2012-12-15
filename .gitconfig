@@ -1,0 +1,20 @@
+# More information:
+# https://git.wiki.kernel.org/index.php/Aliases
+
+[github]
+  user = Hercules Merscher
+[user]
+  name  = Hercules Merscher
+  email = hlmerscher@gmail.com
+[color]
+  diff   = auto
+  status = auto
+  branch = auto
+[alias]
+  st = status -s
+  aa = add .
+  cm = commit -m
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  who = shortlog -sn
+  undo = reset --hard HEAD
+  serve = daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
