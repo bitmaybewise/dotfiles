@@ -1,6 +1,4 @@
 #!/bin/bash
 
-if find ~/.gitconfig; then
-  mv ~/.gitconfig ~/.gitconfig_old
-fi
+mv ~/.gitconfig ~/.gitconfig_old 2> /dev/null
 ln -s $(pwd)/.gitconfig ~/.gitconfig
