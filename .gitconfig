@@ -10,6 +10,8 @@
   diff   = auto
   status = auto
   branch = auto
+[push]
+	default = current
 [alias]
   st = status -s
   aa = add .
