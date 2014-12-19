@@ -14,7 +14,7 @@
 	default = current
 [alias]
   st = status -s
-  aa = add .
+  aa = add --all .
   cm = commit -m
   br = branch -a
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
