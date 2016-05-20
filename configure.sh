@@ -1,13 +1,19 @@
 #!/bin/bash
 
-ln -s $(pwd)/.gitconfig ~/.gitconfig
+MOMENT=$(date +%F-%R)
+
+mv ~/.gitconfig ~/.gitconfig-$MOMENT
+ln -s $(pwd)/gitconfig ~/.gitconfig
 echo .gitconfig configurado!
 
-ln -s $(pwd)/.railsrc ~/.railsrc
+mv ~/.railsrc ~/.railsrc-$MOMENT
+ln -s $(pwd)/railsrc ~/.railsrc
 echo .railsrc configurado!
 
-ln -s $(pwd)/.bash_profile ~/.bash_profile
+mv ~/.bash_profile ~/.bash_profile-$MOMENT
+ln -s $(pwd)/bash_profile ~/.bash_profile
 echo .bash_profile configurado!
 
-ln -s $(pwd)/.gemrc ~/.gemrc
+mv ~/.gemrc ~/.gemrc-$MOMENT
+ln -s $(pwd)/gemrc ~/.gemrc
 echo .gemrc configurado!
