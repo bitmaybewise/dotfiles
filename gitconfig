@@ -21,3 +21,6 @@
   who = shortlog -sn
   undo = reset --hard HEAD
   serve = daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
+  # cmb = clear merged branches (given a pattern): git cmb BLA-* 
+  cmb = !sh -c 'git branch --list $1 --merged | xargs git branch -d' -
+  

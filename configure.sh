@@ -18,6 +18,3 @@ mv ~/.gemrc ~/.gemrc-$MOMENT 2> /dev/null
 ln -s $(pwd)/gemrc ~/.gemrc
 echo .gemrc configured!
 
-mv ~/.Xmodmap ~/.Xmodmap-$MOMENT 2> /dev/null
-ln -s $(pwd)/Xmodmap ~/.Xmodmap
-echo .Xmodmap configured!

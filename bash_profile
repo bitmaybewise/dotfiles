@@ -1,10 +1,10 @@
-source /usr/share/git/completion/git-prompt.sh
+#source /usr/share/git/completion/git-prompt.sh
+source /usr/local/git/contrib/completion/git-prompt.sh
+source /usr/local/git/contrib/completion/git-completion.bash
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
 source ~/.bashrc
 source ~/.profile
-xmodmap ~/.Xmodmap
-
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
 
 BASH_GREEN="\e[1;32m"
 BASH_RED="\e[1;34m"
