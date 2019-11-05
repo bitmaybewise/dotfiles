@@ -24,3 +24,8 @@
   # list local branches but the pattern specified
   but = !sh -c 'git branch --list | grep -vi $1' -
   
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
