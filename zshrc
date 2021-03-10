@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/hercules/.oh-my-zsh"
+export ZSH="/Users/herculesmerscher/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -70,6 +70,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  git-prompt
   docker
   web-search
   colored-man-pages
@@ -104,11 +105,3 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias k=kubectl
 
-export GOPATH=$HOME/go
-export JAVAPATH=/usr/local/opt/openjdk
-export PATH=$PATH:$GOPATH/bin:$JAVAPATH/bin
-
-[[ -s "/Users/hercules/.gvm/scripts/gvm" ]] && source "/Users/hercules/.gvm/scripts/gvm"
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"

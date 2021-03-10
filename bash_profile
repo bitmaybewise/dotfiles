@@ -1,11 +1,14 @@
-# source /usr/local/git/contrib/completion/git-prompt.sh
-source /usr/local/etc/bash_completion.d/git-prompt.sh
-# source /usr/local/git/contrib/completion/git-completion.bash
-source /usr/local/etc/bash_completion.d/git-completion.bash
-# [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+if [ -n "$ZSH_VERSION" ]; then
+    source ./completions/git-completion.zsh
+fi
+if [ -n "$BASH_VERSION" ]; then
+    source ./completions/git-completion.bash
+    [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+fi
+source ./completions/git-prompt.sh
 
-# source ~/.bashrc
-# source ~/.profile
+source ~/.bashrc
+source ~/.profile
 
 BASH_GREEN="\e[1;32m"
 BASH_RED="\e[1;34m"
@@ -18,3 +21,4 @@ export VISUAL="vim"
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+
