@@ -27,4 +27,5 @@
   but = !sh -c 'git branch --list | grep -vi $1' -
 [url "git@github.com:"]
   insteadOf = https://github.com
-
+[core]
+  excludesfile = ~/.gitignore_global
