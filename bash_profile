@@ -21,4 +21,3 @@ export VISUAL="vim"
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-
