@@ -1,2 +1,12 @@
-*.swp
+# Mac
 .DS_Store
+
+# IDE/editors
+*.swp
+.idea/
+
+# Haskell
+dist-newstyle/
+
+# Ruby
+.byebug_history
