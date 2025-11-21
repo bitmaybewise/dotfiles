@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# WARNING 
+# WARNING
 export ZSH_DISABLE_COMPFIX="true"
 
 # Path to your oh-my-zsh installation.
@@ -11,7 +11,11 @@ export ZSH="/Users/hercules/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="avit"
+#ZSH_THEME="avit"
+ZSH_THEME="robbyrussell"
+#ZSH_THEME="apple"
+#ZSH_THEME="refined"
+#ZSH_THEME="dracula"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -30,7 +34,7 @@ ZSH_THEME="avit"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -134,13 +138,36 @@ unsetopt HIST_VERIFY
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias k=kubectl
 
-eval "$(op completion zsh)"; compdef _op op
+export EDITOR=nvim
 
-# Added by GDK bootstrap
-source /Users/hercules/.asdf/asdf.sh
+# 1password-cli
+test -e "$(which op)" && eval "$(op completion zsh)"; compdef _op op && source "${HOME}/.config/op/plugins.sh"
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/hercules/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+# haskell
+export PATH="${HOME}/.ghcup/bin:$PATH"
+export PATH="${HOME}/.ghcup/hls/2.0.0.1/bin:$PATH"
+# SML
+export PATH="/usr/local/smlnj/bin:$PATH"
 
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+fpath+=~/.zfunc
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+[[ ! -r '/Users/hercules/.opam/opam-init/init.zsh' ]] || source '/Users/hercules/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+# END opam configuration
+
+# mise
+eval "$(mise activate zsh)"
+# direnv
+eval "$(direnv hook zsh)"
+
+PATH="$HOME/.local/bin:$PATH"
+export PROMPT_COMMAND=''
