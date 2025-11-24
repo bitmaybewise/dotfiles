@@ -144,25 +144,31 @@ export EDITOR=nvim
 test -e "$(which op)" && eval "$(op completion zsh)"; compdef _op op && source "${HOME}/.config/op/plugins.sh"
 
 # haskell
-export PATH="${HOME}/.ghcup/bin:$PATH"
-export PATH="${HOME}/.ghcup/hls/2.0.0.1/bin:$PATH"
+#export PATH="${HOME}/.ghcup/bin:$PATH"
+#export PATH="${HOME}/.ghcup/hls/2.0.0.1/bin:$PATH"
 # SML
-export PATH="/usr/local/smlnj/bin:$PATH"
+#export PATH="/usr/local/smlnj/bin:$PATH"
 
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+
+# google-cloud-sdk
+source "/opt/homebrew/share/google-cloud-sdk/path.zsh.inc"
+source "/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc"
 
 # BEGIN opam configuration
 # This is useful if you're using opam as it adds:
 #   - the correct directories to the PATH
 #   - auto-completion for the opam binary
 # This section can be safely removed at any time if needed.
-[[ ! -r '/Users/hercules/.opam/opam-init/init.zsh' ]] || source '/Users/hercules/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+[[ ! -r '/Users/hercules/.opam/opam-init/init.zsh' ]] || source '/Users/hercules/.opam/opam-init/init.zsh' 2> /dev/null
 # END opam configuration
+
+# Add Homebrew to PATH
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # mise
 eval "$(mise activate zsh)"

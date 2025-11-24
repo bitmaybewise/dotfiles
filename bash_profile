@@ -17,10 +17,7 @@ BASH_YELLOW="\e[1;33m"
 BASH_GREY="\e[00m"
 BASH_GIT_BRANCH="$BASH_YELLOW\$(__git_ps1)"
 export PS1="\[$BASH_GREEN\]\h\[$BASH_RED\] @ \[$BASH_BLUE\]\u\[$BASH_RED\] \w$BASH_GIT_BRANCH $BASH_GREY\n$ "
-export VISUAL="vim"
+export VISUAL="nvim"
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/hercules/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
-source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
+# mise
+eval "$(mise activate bash)"
