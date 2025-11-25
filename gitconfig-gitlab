@@ -1,0 +1,7 @@
+[gitlab]
+  user = Hercules Merscher
+[user]
+  name = Hercules Merscher
+  email = hmerscher@gitlab.com
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDE3TYnrZXQEXTHn+MJMIFrL0yy4N/uI8RYbEngN6Wes
+
