@@ -47,5 +47,5 @@
 [includeIf "gitdir:~/GitLab/"]
   path = ~/GitLab/.gitconfig
 [maintenance]
-	repo = /Users/hercules/GitLab/gitlab-development-kit
-	repo = /Users/hercules/GitLab/gitlab-development-kit/gitlab
+	repo = /Users/hercules/GitLab/gdk
+	repo = /Users/hercules/GitLab/gdk/gitlab
