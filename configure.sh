@@ -21,3 +21,5 @@ echo .bash_profile configured!
 mv ~/.zshrc ~/.zshrc-$MOMENT 2> /dev/null
 ln -s $(pwd)/zshrc ~/.zshrc
 echo .zshrc configured!
+
+source ./brew.sh

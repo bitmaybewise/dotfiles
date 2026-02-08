@@ -2,6 +2,7 @@ tap 'fforster/gitlab-mcp', 'https://gitlab.com/fforster/homebrew-gitlab-mcp.git'
 brew 'gitlab-mcp'
 
 brew 'ca-certificates'
+brew 'mas'
 
 cask '1password-cli'
 cask 'bartender'
@@ -9,7 +10,6 @@ cask 'brave-browser'
 cask 'browserino'
 cask 'caffeine'
 cask 'calibre'
-cask 'ccleaner'
 cask 'claude'
 cask 'claude-code'
 cask 'cloudflare-warp'
@@ -48,3 +48,5 @@ cask 'visual-studio-code'
 cask 'vlc'
 cask 'whatsapp'
 cask 'zen'
+
+mas 'MEGA VPN', id: 6456784858
