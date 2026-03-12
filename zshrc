@@ -141,7 +141,13 @@ alias k=kubectl
 export EDITOR=nvim
 
 # 1password-cli
-test -e "$(which op)" && eval "$(op completion zsh)"; compdef _op op && source "${HOME}/.config/op/plugins.sh"
+function op() { # this lazy loads op
+  unfunction op
+  eval "$(command op completion zsh)"
+  source "${HOME}/.config/op/plugins.sh"
+  command op "$@"
+}
+# test -e "$(which op)" && eval "$(op completion zsh)"; compdef _op op && source "${HOME}/.config/op/plugins.sh"
 
 # haskell
 #export PATH="${HOME}/.ghcup/bin:$PATH"
