@@ -19,3 +19,5 @@ __pycache__/
 # LLMs
 .claude/
 CLAUDE.local.md
+AGENTS.md
+
