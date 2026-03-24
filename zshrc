@@ -176,10 +176,11 @@ source "/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc"
 # Add Homebrew to PATH
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+PATH="$HOME/.local/bin:$PATH"
+export PROMPT_COMMAND=''
+
 # mise
 eval "$(mise activate zsh)"
 # direnv
 eval "$(direnv hook zsh)"
 
-PATH="$HOME/.local/bin:$PATH"
-export PROMPT_COMMAND=''
