@@ -19,5 +19,5 @@ __pycache__/
 # LLMs
 .claude/
 CLAUDE.local.md
-AGENTS.md
-
+AGENTS.local.md
+OpenCode.local.md
