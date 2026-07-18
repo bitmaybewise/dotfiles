@@ -18,7 +18,6 @@
   aa = add --all .
   cm = commit -m
   camend = commit --amend --no-edit
-  pfwl = push --force-with-lease
   br = branch -a
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   who = shortlog -sn
@@ -27,6 +26,7 @@
   # list local branches but the pattern specified
   but = !sh -c 'git branch --list | grep -vi $1' -
   recent = branch --sort=-committerdate --format=\"%(committerdate:relative)%09%(refname:short)\"
+  bbkp = "!f() { git branch \"bkp/$(git branch --show-current)-$(date +%Y-%m-%d_%H-%M)\"; }; f"
 [core]
   excludesfile = ~/.gitignore_global
 	autocrlf = input
